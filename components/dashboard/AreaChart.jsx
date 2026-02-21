@@ -24,12 +24,12 @@ export default function WeeklyAreaChart() {
   return (
     <div className="mt-5 bg-card text-card-foreground rounded-lg border border-border p-4">
       <h2 className="text-lg font-semibold mb-4 text-foreground">
-        Weekly Bookings
+       الإضافات الجديدة أسبوعياً
       </h2>
 
       <div className="h-64 w-full">
         <ResponsiveContainer width="100%" height="100%">
-          <AreaChart data={data} margin={{ top: 10, right: 20, left: -10, bottom: 0 }}>
+          <AreaChart  data={data} margin={{ top: 10, right: 20, left: -10, bottom: 0 }}>
             
             {/* Grid */}
             <CartesianGrid

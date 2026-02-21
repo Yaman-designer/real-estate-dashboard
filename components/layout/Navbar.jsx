@@ -10,14 +10,15 @@ import {
   Menu,
 } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import ThemeToggle from "@/components/common/ThemeToggle"; // زر الدارك
+import ThemeToggle from "@/components/common/ThemeToggle";
 
 const pathTitles = {
-  "/": "Dashboard",
-  "/room": "Room",
-  "/bookings": "Bookings",
-  "/guest": "Guest",
-  "/concierge": "Concierge",
+  "/": "إحصائيات الموقع",
+  "/properties": "إدارة العقارات",
+  "/users": "إدارة المستخدمين",
+  "/requests-messages": "الطلبات/الرسائل",
+  "/reports": "صفحة التقارير",
+  "/settings": "الإعدادات العامة",
 };
 
 export default function Navbar({ onMenuClick }) {

@@ -34,7 +34,7 @@ export default {
           foreground: "hsl(var(--secondary-foreground))",
         },
 
-        // إذا بدك تضلّي تستخدمين gray بصفوفك عادي خليه هيك:
+       
         gray: {
           50: "#F9FAFB",
           100: "#F3F4F6",

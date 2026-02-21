@@ -6,20 +6,23 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
-  DoorClosed,
-  CalendarDays,
-  User,
-  ConciergeBell,
+  Building2,
+  Users,
+  MessageSquareMore,
+  Settings,
+  BarChart3,
   X,
 } from "lucide-react";
 
 const menu = [
-  { name: "Dashboard", href: "/", icon: LayoutDashboard },
-  { name: "Room", href: "/room", icon: DoorClosed },
-  { name: "Bookings", href: "/bookings", icon: CalendarDays },
-  { name: "Guest", href: "/guest", icon: User },
-  { name: "Concierge", href: "/concierge", icon: ConciergeBell },
+  { name: "إحصائيات الموقع", href: "/", icon: LayoutDashboard },
+  { name: "إدارة العقارات", href: "/properties", icon:Building2 },
+  { name: "إدارة المستخدمين", href: "/users", icon: Users },
+  { name: "الطلبات/الرسائل", href: "/requests-messages", icon: MessageSquareMore },
+  { name: "الإعدادات العامة", href: "/settings", icon: Settings },
+  { name: "صفحة التقارير", href: "/reports", icon: BarChart3 },
 ];
+
 
 export default function Sidebar({ open, setopen }) {
   const pathname = usePathname();
@@ -27,7 +30,7 @@ export default function Sidebar({ open, setopen }) {
   return (
     <aside
       className={cn(
-        "fixed inset-y-0 left-0 z-20 w-64 border-r border-border bg-background transition-transform duration-300",
+        "fixed inset-y-0 left-0 z-20 w-64 border-l border-border bg-background transition-transform duration-300",
         open ? "translate-x-0" : "-translate-x-full",
         "lg:translate-x-0 lg:static"
       )}
@@ -52,7 +55,7 @@ export default function Sidebar({ open, setopen }) {
               key={item.name}
               href={item.href}
               className={cn(
-                "flex flex-col items-center gap-2 rounded-lg py-4 transition group",
+                "flex flex-row  items-center gap-2 rounded-lg py-4 transition group",
                 isActive
                   ? "bg-muted text-primary"
                   : "text-muted-foreground hover:bg-muted hover:text-foreground"
