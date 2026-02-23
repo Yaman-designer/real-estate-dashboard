@@ -1,6 +1,6 @@
 import WelcomeSection from "@/components/dashboard/Welcome";
 import StatsCards from "@/components/dashboard/StatsCards";
-import RecentBookings from "@/components/dashboard/RecentBookings";
+import RecentProperties from "@/components/dashboard/RecentBookings";
 import SimpleAreaChart from "@/components/dashboard/AreaChart";
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <WelcomeSection name="Ahmed" />
       <StatsCards />
       <SimpleAreaChart />
-      <RecentBookings />
+      <RecentProperties />
     </div>
   );
 }
