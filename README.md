@@ -1,20 +1,21 @@
-# Hotel Booking Dashboard
+# Real Estate Management Dashboard
 
-A modern and fully responsive hotel management dashboard built with **Next.js**, **Tailwind CSS**, and **shadcn/ui**. The project includes full support for **Dark/Light Mode**, reusable components, data filtering, tables, dialogs, charts, and a clean UI optimized for real hotel operations.
+A modern and fully responsive **real estate management** dashboard built with **Next.js**, **Tailwind CSS**, and **shadcn/ui**.  
+The project includes full support for **Dark/Light Mode**, reusable components, data filtering, tables, dialogs, charts, and a clean UI optimized for real estate operations.
 
 ---
 
 ## 🌟 Project Overview
 
-This dashboard is designed to help hotel staff efficiently manage:
+This dashboard is designed to help real estate teams efficiently manage:
 
-- Room information (add, edit, delete, update status)
-- Guest profiles and current bookings
-- Concierge requests
-- Weekly booking statistics
-- Real-time statuses and summaries
+- Property listings (add, edit, delete, update status)
+- Property details (city, type, price, owner/agent, status)
+- Leads, inquiries, and viewing requests
+- User / agent management (coming soon)
+- Activity and performance reports
 
-It represents a realistic, production-style admin panel suitable for portfolio and professional use.
+It represents a realistic, production-style **admin panel for real estate** suitable for portfolio and professional use.
 
 ---
 
@@ -27,19 +28,21 @@ AI was used as a helper — not a replacement — and every part of the codebase
 
 ## ✨ Key Features
 
-- 🌗 **Dark / Light Mode** using theme tokens
-- 📱 Fully **Responsive Design** (mobile, tablet, desktop)
-- 🧱 Reusable UI Components (cards, tables, dialogs, dropdowns…)
-- 📊 **Charts & Stats** using Recharts
-- 🧾 Guest Profile + Current Booking Card
-- 🖼 Room Gallery with slider
-- 🔔 Concierge Requests with status cycling
-- 📦 Interactive data tables:
-  - Row selection
-  - Select all
-  - Filtering
-  - Multi-delete
-  - View dialogs
+- 🌗 **Dark / Light Mode** using theme tokens  
+- 📱 Fully **Responsive Design** (mobile, tablet, desktop)  
+- 🧱 Reusable UI Components (cards, tables, dialogs, dropdowns…)  
+- 📊 **Reports & Stats** using Recharts  
+- 🏠 Property management table with:
+  - Property name, city, type, price, owner/agent, status
+  - Status toggling (active / pending / rejected)
+  - Row selection & “select all”
+  - Filtering by status
+  - Bulk delete
+- 📩 Requests & Messages page for:
+  - Contact requests
+  - Viewing bookings
+  - General inquiries
+- ⚙ General settings page (branding, language, contact info, etc.)
 
 ---
 
@@ -59,8 +62,8 @@ AI was used as a helper — not a replacement — and every part of the codebase
 
 Dark mode is implemented using:
 
-- `darkMode: "class"` in Tailwind
-- ThemeProvider from `next-themes`
+- `darkMode: "class"` in Tailwind  
+- ThemeProvider from `next-themes`  
 - Consistent use of CSS variables/tokens:
   - `bg-background`
   - `text-foreground`
@@ -69,18 +72,24 @@ Dark mode is implemented using:
   - `border-border`
   - `bg-popover`
 
-This ensures scalable theming across all pages and components.
+This makes theming scalable across all pages and components.
 
 ---
 
 ## 📊 Charts
 
-Recharts is fully customized to match the theme by using CSS variables:
+Recharts is integrated and styled using design tokens:
 
-- Grid color from: `hsl(var(--border))`
-- Text color from: `hsl(var(--muted-foreground))`
-- Primary color from: `hsl(var(--primary))`
-- Dark-mode compatible tooltips
+- Grid color: `hsl(var(--border))`
+- Text color: `hsl(var(--muted-foreground))`
+- Primary color: `hsl(var(--primary))`
+- Dark-mode friendly tooltips
+
+Used mainly for:
+
+- Property performance overview
+- Requests / messages analytics
+- Time-based reports (weekly / monthly / yearly)
 
 ---
 
@@ -90,7 +99,7 @@ Planned features:
 
 - Arabic + English
 - RTL/LTR auto support
-- Centralized translation files (i18n)
+- Centralized translation files (i18n-ready structure)
 
 The project structure is already prepared for future localization.
 
@@ -98,34 +107,8 @@ The project structure is already prepared for future localization.
 
 ## 🚀 How to Run Locally
 
-### 1. Clone the repo
 ```bash
 git clone <your-repo-url>
 cd <project-folder>
-  
-
-
-🧠 What I Learned
-
-Building a complete dashboard using modern Next.js (App Router)
-
-Using shadcn/ui effectively and customizing components
-
-Implementing a scalable theming system with tokens
-
-Creating reusable UI components
-
-Implementing tables with actions, dialogs, and filtering
-
-Using Recharts and integrating them with Dark Mode
-
-Improving code structure, UX decisions, and responsive layouts
-
-
-
-
-License
-
-This project is built for educational and portfolio purposes.
-Feel free to use and modify it.
-
+npm install
+npm run dev
